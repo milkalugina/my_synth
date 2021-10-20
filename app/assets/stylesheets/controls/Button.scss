@@ -1,0 +1,19 @@
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
+  padding: 8px 10px;
+  font-size: 50px;
+  text-align: center;
+  background-color: var(--pink);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 100%;
+
+  &:hover {
+    background-color: var(--light-pink);
+    filter: brightness(90%);
+  }
+}
