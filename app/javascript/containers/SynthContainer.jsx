@@ -3,7 +3,8 @@ import * as Tone from 'tone'
 // import * as spaceSynth from '../tunes/space_synth'
 // import * as allEffectsSynth from '../tunes/all_effects_synth'
 import * as drumSampler from '../tunes/drum_sampler'
-import * as sequencedSynth from '../tunes/sequenced_synth'
+import * as oudSampler from '../tunes/oud_sampler'
+import * as additionalSampler from '../tunes/additional_sampler'
 
 import React, { PureComponent } from 'react'
 
@@ -46,7 +47,9 @@ export default class SynthContainer extends PureComponent {
       // melodySynth.instrument,
       // spaceSynth.instrument
       // allEffectsSynth.instrument
-      drumSampler.instrument
+      drumSampler.instrument,
+      oudSampler.instrument,
+      additionalSampler.instrument
     ]
 
     this.setState({ instruments })

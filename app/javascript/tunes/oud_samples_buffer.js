@@ -1,18 +1,18 @@
 import * as Tone from 'tone'
 
 const samples = [
-  'samples/drums-arabic_1.mp3',
-  'samples/drums-arabic_2.mp3',
-  'samples/drums-arabic_3.mp3',
-  'samples/drums-arabic_1.mp3',
-  'samples/drums-arabic_2.mp3',
-  'samples/drums-arabic_3.mp3',
-  'samples/drums-arabic_1.mp3',
-  'samples/drums-arabic_2.mp3',
-  'samples/drums-arabic_3.mp3',
-  'samples/drums-arabic_1.mp3',
-  'samples/drums-arabic_2.mp3',
-  'samples/drums-arabic_3.mp3'
+  'samples/oud_1.mp3',
+  'samples/oud_2.mp3',
+  'samples/oud_3.mp3',
+  'samples/oud_1.mp3',
+  'samples/oud_2.mp3',
+  'samples/oud_3.mp3',
+  'samples/oud_1.mp3',
+  'samples/oud_2.mp3',
+  'samples/oud_3.mp3',
+  'samples/oud_1.mp3',
+  'samples/oud_2.mp3',
+  'samples/oud_3.mp3'
 ]
 
 function createBuffer(path) {

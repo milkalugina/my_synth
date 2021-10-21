@@ -1,6 +1,6 @@
 import * as Tone from 'tone'
 import { generateUniqId } from '../utilities'
-import { loadSamples } from './drum_samples_buffer'
+import { loadSamples } from './additional_samples_buffer'
 
 const samples = loadSamples()
 
@@ -69,26 +69,17 @@ const channelSettings = {
   solo: false
 }
 
-const autoFilterSettings = {
+const feedbackDelaySettings = {
   wet: 0,
-  type: 'sine',
-  frequency: 1,
-  depth: 1,
-  baseFrequency: 200,
-  octaves: 2.6,
-  filter: {
-    type: 'lowpass',
-    frequency: 100,
-    rolloff: -12,
-    Q: 1
-  }
+  delayTime: 0.8,
+  maxDelay: 0.8
 }
 
 const samplerNode = new Tone.Sampler(samplerSettings)
-const autoFilterNode = new Tone.AutoFilter(autoFilterSettings).start()
+const feedbackDelayNode = new Tone.FeedbackDelay(feedbackDelaySettings)
 const freeverbNode = new Tone.Freeverb(freeverbSettings)
 const channelNode = new Tone.Channel(channelSettings).toDestination()
-samplerNode.chain(freeverbNode, channelNode, autoFilterNode)
+samplerNode.chain(freeverbNode, channelNode, feedbackDelayNode)
 
 const v = 1
 const d = '4n'
@@ -169,7 +160,7 @@ const instrument = [
   },
   {
     id: generateUniqId(),
-    name: 'Drum Sampler',
+    name: 'Additional Sampler',
     type: 'Sampler',
     node: samplerNode,
     settings: samplerSettings
@@ -190,10 +181,10 @@ const instrument = [
   },
   {
     id: generateUniqId(),
-    name: 'Auto Filter',
-    type: 'AutoFilterEffect',
-    node: autoFilterNode,
-    settings: autoFilterSettings
+    name: 'Feedback Delay',
+    type: 'FeedbackDelayEffect',
+    node: feedbackDelayNode,
+    settings: feedbackDelaySettings
   }
 ]
 

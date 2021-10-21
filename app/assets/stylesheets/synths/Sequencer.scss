@@ -1,4 +1,17 @@
 .Sequencer {
-  width: 800px !important;
-  min-width: 800px !important;
+  min-width: 95vw !important;
+}
+
+.SequencerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.SequencerRow .ToggleButton {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  margin: 4px;
 }

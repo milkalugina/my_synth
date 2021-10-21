@@ -1,31 +1,32 @@
 .SynthRoom {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  min-height: 100vh;
 
   .Row {
     display: flex;
-    height: 50vh;
+    flex-wrap: wrap;
+    justify-content: center;
     overflow-x: scroll;
     overflow-y: hidden;
 
     &:not(:first-child) {
-      border-top: 3px solid white;
+      margin: 5px;
+      // background-color: #ff5280;
     }
 
     & > div {
       display: flex;
       flex-direction: column;
+      flex-grow: 2;
+
       width: 220px;
       min-width: 220px;
       height: 100%;
-      border-left: 3px solid white;
-      border-right: none;
       overflow: scroll;
 
       &:last-child {
         width: 223px;
-        border-right: 3px solid white;
       }
 
       h1 {
@@ -34,24 +35,64 @@
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
-        border-bottom: 1px solid var(--white);
       }
 
       h2 {
+        font-family: 'DidactGothic-Regular';
         padding: 0 20px;
         line-height: 60px;
         text-align: center;
         text-transform: uppercase;
-        border-bottom: 1px solid var(--white);
       }
 
       .Slider,
       .Knob,
       .ButtonSet {
-        // margin: 40px 0;
         padding: 20px;
-        border-bottom: 1px solid var(--white);
       }
     }
   }
+}
+
+.SynthRoom .Row:after(:first-child) {
+  background-color: #ff5280;
+}
+
+.SynthRoom .Row {
+  margin: 20px;
+  border-radius: 50px;
+  padding: 20px;
+  height: 95vh;
+  overflow-y: scroll;
+}
+
+.SynthRoom .Row:first-child {
+  background-color: #183e8f;
+}
+
+.SynthRoom .Row:nth-child(2) {
+  margin-top: 50px;
+  background-color: #eadd55;
+}
+
+.SynthRoom .Row:nth-child(3) {
+  margin-top: 50px;
+  background-color: #ff5280;
+}
+
+.Sampler,
+.FreeverbEffect,
+.ChorusEffect,
+.PitchShiftEffect,
+.FeedbackDelayEffect,
+.AutoFilterEffect {
+  margin: 15px;
+  margin-top: 40px;
+  background-color: #1d1a19;
+  padding: 15px;
+  border-radius: 40px;
+}
+
+h3 {
+  font-family: 'DidactGothic-Regular';
 }

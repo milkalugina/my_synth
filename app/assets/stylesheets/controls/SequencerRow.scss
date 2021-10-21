@@ -6,15 +6,15 @@
     height: 40px;
     padding: 0;
     line-height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    // border: 1px solid rgba(255, 255, 255, 0.2);
 
     background-color: var(--black);
     color: var(--black);
     cursor: pointer;
 
     &:hover:not(.active) {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 1);
     }
 
     &.active {
